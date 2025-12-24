@@ -1,4 +1,4 @@
-# CTF Writeups Collection
+# 📑 CTF Writeups Collection
 
 Collection of my CTF challenge writeups.
 

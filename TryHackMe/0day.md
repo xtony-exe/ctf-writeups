@@ -1,24 +1,24 @@
 # TryHackMe - 0day Write-up 🏴‍☠️
 
 ## Table of Contents
-1. [Overview](#overview)
-2. [Reconnaissance](#reconnaissance)
-   - [Nmap Scan](#nmap-scan)
-   - [Gobuster Directory Enumeration](#gobuster-directory-enumeration)
-   - [Nikto Vulnerability Scan](#nikto-vulnerability-scan)
-3. [Exploitation](#exploitation)
-   - [Identifying Shellshock (CVE-2014-6271)](#identifying-shellshock-cve-2014-6271)
-   - [Using the Public Exploit](#using-the-public-exploit)
-   - [Gaining Initial Foothold](#gaining-initial-foothold)
-4. [Post-Exploitation](#post-exploitation)
-   - [Enumerating the System](#enumerating-the-system)
-   - [Capturing the User Flag](#capturing-the-user-flag)
-5. [Privilege Escalation](#privilege-escalation)
-   - [Kernel Enumeration](#kernel-enumeration)
-   - [Finding the Right Exploit](#finding-the-right-exploit)
-   - [Compiling and Executing the Kernel Exploit](#compiling-and-executing-the-kernel-exploit)
-   - [Capturing the Root Flag](#capturing-the-root-flag)
-6. [Conclusion](#conclusion)
+1. Overview
+2. Reconnaissance
+   - Nmap Scan
+   - Gobuster Directory Enumeration
+   - Nikto Vulnerability Scan
+3. Exploitation
+   - Identifying Shellshock (CVE-2014-6271)
+   - Using the Public Exploit
+   - Gaining Initial Foothold
+4. Post-Exploitation
+   - Enumerating the System
+   - Capturing the User Flag
+5. Privilege Escalation
+   - Kernel Enumeration
+   - Finding the Right Exploit
+   - Compiling and Executing the Kernel Exploit
+   - Capturing the Root Flag
+6. Conclusion
 
 ## Overview
 This is a write-up for the **0day** machine on TryHackMe. The box is an Ubuntu server vulnerable to the infamous **Shellshock vulnerability (CVE-2014-6271)** in a CGI script, leading to initial access. Privilege escalation is achieved via a kernel exploit targeting the **OverlayFS vulnerability (CVE-2015-1328)**.
